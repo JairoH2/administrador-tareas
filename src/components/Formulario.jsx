@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Formulario = ({users, setIsValidLogin}) => {
+const Formulario = ({users, setIsValidLogin, setUserActive}) => {
 
     //* Hooks
     const [user, setUser] = useState('');
@@ -19,7 +19,8 @@ const Formulario = ({users, setIsValidLogin}) => {
 
         //Buscar usuario en BD
         users.forEach( item => {
-            if(item.user === user && item.password){
+            if(item.user === user && item.password === password){
+                setUserActive(user);
                 setIsValidLogin(true);
                 return;
             }

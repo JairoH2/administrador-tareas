@@ -11,9 +11,14 @@ function App() {
       user: 'Jairo',
       password: 'password'
     },
+    {
+      user: 'Josué',
+      password: 'contraseña'
+    }
   ]);
   const [isValidLogin, setIsValidLogin] = useState(false);
   const [modal, setModal] = useState(false);
+  const [userActive, setUserActive] = useState('');
 
   //* Funciones
 
@@ -21,10 +26,13 @@ function App() {
   return (
     <div className="bg-gradient-to-r from-personal-purple to-personal-pink h-screen">
       {isValidLogin ? (
-          <ListTasks/>) : (
+          <ListTasks
+            userActive={userActive}
+          />) : (
           <Login 
             users={users}
             setIsValidLogin={setIsValidLogin}
+            setUserActive={setUserActive}
           />  
         )
       }

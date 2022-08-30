@@ -24,7 +24,7 @@ function App() {
 
   //* Template
   return (
-    <div className="bg-gradient-to-r from-personal-purple to-personal-pink h-screen">
+    <div className="bg-gradient-to-r from-personal-purple to-personal-pink min-h-screen pb-5">
       {isValidLogin ? (
           <ListTasks
             userActive={userActive}

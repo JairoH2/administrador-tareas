@@ -5,7 +5,6 @@ import Login from "./components/Login";
 function App() {
 
   //* Hooks
-  const [tasks, setTaks] = useState([]);
   const [users, setUsers] = useState([
     {
       user: 'Jairo',
